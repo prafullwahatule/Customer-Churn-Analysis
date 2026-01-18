@@ -18,5 +18,9 @@ This project focuses on analyzing large-scale customer data to identify churn pa
 
 - Delivered actionable insights to marketing and customer success teams, supporting effective retention strategies and business decisions.
 
+### What we do in this project  
+
+<img width="1197" height="673" alt="Home" src="https://github.com/user-attachments/assets/944c5866-e881-4abc-8471-ebd34e93fe71" />
+
 ### Tools & Technologies:
 Power BI, DAX, Python (Pandas, NumPy, Matplotlib, Seaborn), MySQL, SQL
