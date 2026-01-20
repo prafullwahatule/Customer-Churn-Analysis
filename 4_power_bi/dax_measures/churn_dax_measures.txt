@@ -1,0 +1,202 @@
+===========================================================================================
+Customer Churn Analysis – DAX Measures Documentation
+===========================================================================================
+
+------------------------------------------------------------------------------------------
+Base Customer Metrics
+------------------------------------------------------------------------------------------
+
+Total Customers = 
+CALCULATE(
+    DISTINCTCOUNT('Customer Churn'[customer_id]),
+    REMOVEFILTERS('Customer Churn'[churn])
+)
+
+
+Description: Total unique customers regardless of churn status.
+
+------------------------------------------------------------------------------------------
+
+Active Customers = 
+CALCULATE(
+    [Total Customers],
+    'Customer Churn'[churn] = 0
+)
+
+
+Description: Customers who are currently active (not churned).
+
+------------------------------------------------------------------------------------------
+
+Churned Customers = 
+CALCULATE(
+    DISTINCTCOUNT('Customer Churn'[customer_id]),
+    'Customer Churn'[churn] = 1
+)
+
+
+Description: Customers who have churned.
+
+------------------------------------------------------------------------------------------
+
+Churned Customers (Period) = 
+[Churned Customers]
+
+
+Description: Churned customers in the selected time period (supports slicers).
+
+
+------------------------------------------------------------------------------------------
+Rate Metrics
+------------------------------------------------------------------------------------------
+
+Churn Rate = 
+DIVIDE([Churned Customers], [Total Customers])
+
+
+Description: Percentage of customers who churned.
+
+------------------------------------------------------------------------------------------
+
+Retention Rate = 
+1 - [Churn Rate]
+
+
+Description: Percentage of customers retained.
+
+------------------------------------------------------------------------------------------
+
+Churn Rate (Segment) = 
+[Churn Rate]
+
+
+Description: Churn rate for selected customer segment.
+
+------------------------------------------------------------------------------------------
+Engagement & Value Metrics
+------------------------------------------------------------------------------------------
+
+Average Tenure = 
+AVERAGE('Customer Churn'[tenure])
+
+
+Description: Average customer tenure (months).
+
+------------------------------------------------------------------------------------------
+
+Average Total Spend = 
+AVERAGE('Customer Churn'[total_spend])
+
+
+Description: Average revenue per customer.
+
+------------------------------------------------------------------------------------------
+
+Avg Usage Frequency = 
+AVERAGE('Customer Churn'[usage_frequency])
+
+
+Description: Average usage frequency score.
+
+------------------------------------------------------------------------------------------
+
+Avg Support Calls = 
+AVERAGE('Customer Churn'[support_calls])
+
+
+Description: Average number of customer support interactions.
+
+------------------------------------------------------------------------------------------
+
+Avg Payment Delay = 
+AVERAGE('Customer Churn'[payment_delay])
+
+
+Description: Average payment delay in days.
+
+------------------------------------------------------------------------------------------
+Churned Customer Analysis
+------------------------------------------------------------------------------------------
+
+Avg Tenure (Churned) = 
+CALCULATE(
+    AVERAGE('Customer Churn'[tenure]),
+    'Customer Churn'[churn] = 1
+)
+
+
+Description: Average tenure of churned customers.
+
+------------------------------------------------------------------------------------------
+
+Avg Spend (Churned) = 
+CALCULATE(
+    AVERAGE('Customer Churn'[total_spend]),
+    'Customer Churn'[churn] = 1
+)
+
+
+Description: Average spend of churned customers.
+
+------------------------------------------------------------------------------------------
+Customer Value Metrics
+------------------------------------------------------------------------------------------
+
+CLV (Simple) = 
+[Average Total Spend] * [Average Tenure]
+
+
+Description: Simple customer lifetime value estimation.
+
+------------------------------------------------------------------------------------------
+High-Risk Customer Metrics
+------------------------------------------------------------------------------------------
+
+High-Risk Criteria
+
+Support Calls ≥ 5
+
+Payment Delay ≥ 15 days
+
+Usage Frequency ≤ 5
+
+High Risk Customers = 
+CALCULATE(
+    DISTINCTCOUNT('Customer Churn'[customer_id]),
+    'Customer Churn'[support_calls] >= 5,
+    'Customer Churn'[payment_delay] >= 15,
+    'Customer Churn'[usage_frequency] <= 5
+)
+
+
+Description: Customers identified as high churn risk based on behavior.
+
+------------------------------------------------------------------------------------------
+
+Churn Rate (High Risk) = 
+DIVIDE(
+    CALCULATE(
+        DISTINCTCOUNT('Customer Churn'[customer_id]),
+        'Customer Churn'[churn] = 1,
+        'Customer Churn'[support_calls] >= 5,
+        'Customer Churn'[payment_delay] >= 15,
+        'Customer Churn'[usage_frequency] <= 5
+    ),
+    [High Risk Customers]
+)
+
+
+Description: Churn rate among high-risk customers.
+
+
+
+------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+Notes
+------------------------------------------------------------------------------------------
+
+Percentage measures are formatted at the model level.
+
+Measures are reusable across all report pages.
+
+Centralized DAX improves consistency and governance.
