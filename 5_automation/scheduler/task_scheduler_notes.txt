@@ -1,0 +1,53 @@
+Customer Churn Analysis – Automation & Scheduling Notes
+--------------------------------------------------------
+
+Objective:
+Automate monthly churn report generation using Python and schedule it to run without manual intervention.
+
+Script Used:
+monthly_churn_report.py  
+(Generated from monthly_churn_report.ipynb using nbconvert)
+
+Original Notebook Path:
+C:\Users\Prafull Wahatule\Desktop\Customer-Churn-Analysis\3_python\scripts\monthly_churn_report.ipynb
+
+Automation Tool:
+Windows Task Scheduler
+
+Schedule Frequency:
+Monthly (1st day of every month at 9:00 AM)
+
+Steps to Configure Task Scheduler:
+1. Open Windows Task Scheduler
+2. Click "Create Basic Task"
+3. Name: Monthly Customer Churn Report
+4. Trigger:
+   - Monthly
+   - Repeat every 1 month
+5. Action:
+   - Start a Program
+6. Program/script:
+   - Path to python.exe  
+     Example:
+     C:\Users\Prafull Wahatule\AppData\Local\Programs\Python\Python311\python.exe
+7. Add arguments:
+   - "C:\Users\Prafull Wahatule\Desktop\Customer-Churn-Analysis\3_python\scripts\monthly_churn_report.py"
+8. Start in:
+   - "C:\Users\Prafull Wahatule\Desktop\Customer-Churn-Analysis\3_python\scripts\"
+9. Configure:
+   - Run whether user is logged in or not
+   - Run with highest privileges
+
+Output:
+- Generates monthly churn KPI summary
+- Saves report locally (CSV / Excel / PDF)
+- Logs execution status
+
+Error Handling:
+- Python try-except blocks handle runtime failures
+- Execution status written to automation_logs.txt
+
+Business Impact:
+- Eliminated manual monthly reporting
+- Ensured timely churn insights
+- Improved reporting accuracy and consistency
