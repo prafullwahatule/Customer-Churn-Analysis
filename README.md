@@ -290,7 +290,28 @@ pip install -r requirements.txt
 
 ## 📈 Future Enhancements
 
-✔ Build Predictive Machine Learning churn model
-✔ Real-time dashboard refresh via streaming data
-✔ Alerting system for high-risk customer events
-✔ Deploy dashboard to Power BI Service
+✔ Build Predictive Machine Learning churn model  
+✔ Real-time dashboard refresh via streaming data  
+✔ Alerting system for high-risk customer events  
+✔ Deploy dashboard to Power BI Service  
+
+--- 
+
+## 🙏 Acknowledgement
+
+Special thanks to the **Kaggle Customer Churn Dataset** for providing an excellent real-world dataset.  
+This project was created as part of a **Data Analytics learning journey** using **Power BI, Python, and SQL**.
+
+---
+
+## 📎 Author
+
+**👤 Name:** Prafull Wahatule  
+**📧 Email:** [prafullwahatule@gmail.com](mailto:prafullwahatule@gmail.com)  
+**💻 GitHub:** [https://github.com/prafullwahatule](https://github.com/prafullwahatule)  
+**🔗 LinkedIn:** [https://www.linkedin.com/in/prafullwahatule/](https://www.linkedin.com/in/prafullwahatule/)  
+**🌐 Portfolio:** [https://prafullwahatule.github.io/portfolio/](https://prafullwahatule.github.io/portfolio/)
+
+---
+
+⭐ *If you found this project helpful, don’t forget to star the repository!* ⭐
