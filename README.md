@@ -7,22 +7,17 @@
 ## 🚀 Project Overview
 
 The **Customer Churn Analysis Dashboard** project focuses on analyzing large-scale customer data to identify churn patterns, high-risk customer segments, and key retention drivers. The goal is to enable data-driven decision-making by delivering actionable insights through exploratory analysis, automated reporting, and interactive dashboards.
-This project focuses on analyzing large-scale customer data to identify churn patterns, high-risk customer segments, and key retention drivers. The goal is to enable data-driven decision-making by delivering actionable insights through automated reporting and interactive dashboards.
 
 The dataset (**4.4L+ records**) used in this project is sourced from **Kaggle** and was ingested into **MySQL** for reporting and analytical processing.
 
-- Collected, cleaned, and transformed 1.9L+ customer transaction records from MySQL for analytical reporting.
+### Key Project Activities
 
+- Collected, cleaned, and transformed **1.9L+** customer transaction records from MySQL for analytical reporting.
 - Performed Exploratory Data Analysis (EDA) using Python to uncover churn drivers, behavioral trends, and customer risk segments.
-
 - Designed and developed interactive Power BI dashboards to monitor churn trends, retention KPIs, cohort analysis, and customer segmentation.
-
 - Built advanced DAX measures to calculate churn rate, customer lifetime value (CLV), retention percentage, and time-based metrics.
-
-- Automated monthly churn reporting using Python scripts and SQL, reducing manual reporting efforts by approximately 25%.
-
+- Automated monthly churn reporting using Python scripts and SQL, reducing manual reporting efforts by approximately **25%**.
 - Optimized data models and DAX calculations to improve dashboard performance and refresh efficiency.
-
 - Delivered actionable insights to marketing and customer success teams, supporting effective retention strategies and business decisions.
 
 ---
@@ -237,6 +232,7 @@ CALCULATE(
     'Customer Churn'[usage_frequency] <= 5
 )
 ```
+---- 
 
 ## ⚙️ Automation  
 
@@ -245,6 +241,8 @@ CALCULATE(
 - Execution scheduled via Windows Task Scheduler.
 
 - Reduced manual reporting time by ~25%.
+
+--- 
 
 ## 📌 How to Run This Project
 1. Clone Repository
@@ -287,6 +285,8 @@ pip install -r requirements.txt
 - Identified priority customer segments
 
 - Helps maximize Customer Lifetime Value (CLV)
+
+--- 
 
 ## 📈 Future Enhancements
 
