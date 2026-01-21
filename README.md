@@ -158,12 +158,23 @@ Raw customer churn data was provided in CSV format from Kaggle and stored in the
 ## 📈 Dashboard Design
 
 ### 🗂 Pages Overview
-- **Home** — Overview and navigation  
-- **Executive Summary** — Top-level KPIs  
-- **Churn Trends** — Time-series analysis  
-- **Customer Segmentation** — Risk & behavior segments  
-- **Churn Drivers** — Behavioral drivers and patterns  
-- **Insights & Recommendations** — Business-focused takeaways  
+- **Home** — Overview and navigation
+<img width="1390" height="779" alt="Home" src="https://github.com/user-attachments/assets/26afdddf-5150-4ee6-b17b-f9d4293444a9" />
+  
+- **Executive Summary** — Top-level KPIs
+<img width="1386" height="777" alt="Executive Overview" src="https://github.com/user-attachments/assets/9115558b-a358-4cdf-b1bb-81854a3fc813" />
+  
+- **Churn Trends** — Time-series analysis
+<img width="1387" height="781" alt="Churn Trends" src="https://github.com/user-attachments/assets/15ac1a18-76b7-4ccc-ac03-442fda560f1b" />
+  
+- **Customer Segmentation** — Risk & behavior segments
+<img width="1388" height="782" alt="Cust Segmentation" src="https://github.com/user-attachments/assets/67109adb-a9eb-4f67-9b26-15f1e1add145" />
+  
+- **Churn Drivers** — Behavioral drivers and patterns
+<img width="1388" height="783" alt="Churn Drivers" src="https://github.com/user-attachments/assets/31410542-862d-4068-b33a-422f21d4f567" />
+  
+- **Insights & Recommendations** — Business-focused takeaways
+<img width="1391" height="781" alt="Insights   Recommendation" src="https://github.com/user-attachments/assets/006a836f-1713-45ae-85eb-901b07618dac" />
 
 
 ### 🎨 Design Principles
