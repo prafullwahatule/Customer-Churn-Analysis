@@ -326,3 +326,6 @@ This project was created as part of a **Data Analytics learning journey** using 
 ---
 
 ⭐ *If you found this project helpful, don’t forget to star the repository!* ⭐
+### Thank You !!!!  
+[![Contributors](https://contrib.rocks/image?repo=prafullwahatule/customer-churn-analysis)](https://github.com/prafullwahatule/customer-churn-analysis/graphs/contributors)
+
